@@ -6,6 +6,8 @@ export default function Home() {
     <div style={{textAlign: "center", marginTop: "4em"}}>
       <h1>Booklect</h1>
       <h2>demo version</h2>
+      <h3>test test test test</h3>
+      <h4>heheheheheheheehehhehe</h4>
     </div>
   );
 }
