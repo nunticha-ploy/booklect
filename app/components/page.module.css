@@ -10,6 +10,17 @@
     align-items: center;
 }
 
+
+.navIcon {
+    margin-left: -30px;
+    transition: filter 0.3s ease, border 0.3s ease;
+}
+
+.navIcon:hover {
+    filter: brightness(0) invert(1);
+    transform: scale(1.1);
+}
+
 .nav {
     display: flex;
     flex-direction: row;
@@ -27,19 +38,19 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     min-width: 100px;
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 .nav li a:hover {
     color: #ffffff !important;
     transform: scale(1.1);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     font-weight: bold;
 }
 
@@ -50,6 +61,7 @@
 .nav li a:visited {
     color: black;
 }
+
 
 /*Footer*/
 .containerFooter {
@@ -72,6 +84,15 @@
     font-weight: 300;
     font-size: 16px;
     line-height: 19px;
+}
+
+.socialNav li a {
+    min-width: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.socialNav li a:hover {
+    transform: scale(1.3);
 }
 
 /*HomePage*/
@@ -114,6 +135,7 @@
     font-size: 32px;
     line-height: 38px;
     color: #000000;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button:hover {
@@ -122,4 +144,12 @@
     transform: scale(1.1);
     color: #EDE7D7;
     cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+    background-color: #F3C838;
+    border-color: #F3C838;
+    transform: scale(0.98);
+    color: #000000;
 }

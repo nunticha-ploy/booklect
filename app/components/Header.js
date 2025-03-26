@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Header() {
@@ -14,7 +15,7 @@ export default function Header() {
                     <li><Link href="/Dashboard">Dashboard</Link></li>
                     <li><Link href="/MyBooks">My books</Link></li>
                     {/* change emoji to icon later*/}
-                    <li><Link href="/SearchBooks">🔍</Link></li>
+                    <li className={styles.navIcon}><Link href="/SearchBooks"><Image src="/search.png" alt="search icon" width={24} height={24} priority /></Link></li>
                 </ul>
             </nav>
         </header>
