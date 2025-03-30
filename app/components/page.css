@@ -293,6 +293,21 @@
     color: #000000;
 }
 
+.containerSearch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.containerSearch h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+}
+
 
 @media (max-width: 393px) {
 
