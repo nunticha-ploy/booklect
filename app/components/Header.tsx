@@ -8,7 +8,7 @@ export default function Header() {
     return (
         <header className="containerHeader" >
             <div>
-                <Image src="/booklect_logo2.png" alt="booklect logo" width={190} height={67} priority />
+                <Image className="logo" src="/booklect_logo2.png" alt="booklect logo" width={190} height={67} priority />
             </div>
             <nav>
                 <Navbar />
