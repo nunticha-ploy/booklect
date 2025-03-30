@@ -10,6 +10,10 @@
     align-items: flex-end;
 }
 
+.logo {
+    margin-left: 25%;
+}
+
 .navIcon {
     margin-left: -30px;
     transition: filter 0.3s ease, border 0.3s ease;
@@ -298,6 +302,10 @@
         align-items: center;
     }
 
+    .logo {
+        margin-left: 0;
+    }
+
     .readingImg {
         margin-top: 10%;
         margin-bottom: 5%;
@@ -389,14 +397,5 @@
         font-size: 12px;
         line-height: 15px;
     }
-
-
-
-
-
-
-
-
-
 
 }
