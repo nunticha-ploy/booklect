@@ -1,7 +1,7 @@
 import React from "react";
-import BookList from "./books/index";
+import BookList from "./books/page";
 import BookStats from "./books/stats";
-import styles from "./dashboard.module.css";
+import styles from "./page.module.css";
 
 const books_read = [
   { id: 1, title: "Harry Potter and the Philosopher’s Stone" },
