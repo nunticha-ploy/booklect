@@ -1,7 +1,8 @@
 import React from "react";
 import BookList from "./books/page";
-import BookStats from "./books/stats";
 import styles from "./page.module.css";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const books_read = [
   { id: 1, title: "Harry Potter and the Philosopher’s Stone" },
@@ -36,19 +37,14 @@ const books_toread = [
 function Dashboard() {
   return (
     <div>
-      <div className={styles.header}>
-        <h1>Dashboard</h1>
-      </div>
-      <div className={styles.container}>
-        <div className={styles.booklist}>
+      <Header />
+      <main>
+        <div>
           <BookList
             books_read={books_read} books_reading={books_reading} books_toread={books_toread} />
         </div>
-        <div className={styles.bookstats}>
-          <BookStats
-            books_read={books_read} books_reading={books_reading} books_toread={books_toread} />
-        </div>
-      </div>
+      </main>
+      <Footer />
     </div>
   );
 }
