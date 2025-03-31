@@ -12,7 +12,7 @@ export default function Navbar() {
             {/* Desktop Menu */}
             <ul className="nav">
                 <li><Link href="/">Home</Link></li>
-                <li><Link href="/">Dashboard</Link></li>
+                <li><Link href="/dashboard">Dashboard</Link></li>
                 <li><Link href="/">My books</Link></li>
                 <li className="navIcon"><Link href="/Searchbooks"><Image src="/search.png" alt="search icon" width={24} height={24} priority /></Link></li>
             </ul>
