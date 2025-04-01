@@ -1,13 +1,13 @@
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../components/page.css";
 import '../globals.css';
 import './bookpage.css';
 
-
-
-export default function SearchPage (){
+export default function Bookpage(){
   const bookdetails = {
     "name": "Harry Potter and the sorcerer’s stone",
     "description": "Harry Potter has never played a sport while flying on a broomstick. He's never worn a cloak of invisibility, befriended a giant, or helped hatch a dragon. All Harry knows is a miserable life with the Dursleys, his horrible aunt and uncle, and their abominable son, Dudley. Harry's room is a tiny closet at the foot of the stairs, and he hasn't had a birthday party in eleven years...",
@@ -17,11 +17,6 @@ export default function SearchPage (){
     "category": "Fantasy",
     "mrate": "PG-13",
   }
-
-
-
-
-
     return (
         <div>
           <Header />
@@ -51,5 +46,5 @@ export default function SearchPage (){
             </div>
           <Footer />
         </div>
-      );
+    )
 }
