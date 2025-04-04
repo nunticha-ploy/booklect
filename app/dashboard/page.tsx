@@ -3,6 +3,8 @@ import BookList from "./books/page";
 import styles from "./page.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import "../components/page.css";
+import '../globals.css';
 
 const books_read = [
   { id: 1, title: "Harry Potter and the Philosopher’s Stone" },
