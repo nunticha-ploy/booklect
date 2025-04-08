@@ -15,9 +15,9 @@ export default function Footer() {
                 </ul>
                 <ul className="footer socialNav">
                     {/* change icon later*/}
-                    <li><Link href="/fb"><Image src="/facebook.png" alt="facebook logo" width={33} height={33} priority /></Link></li>
-                    <li><Link href="/ig"><Image src="/instagram.png" alt="instagram logo" width={33} height={33} priority /></Link></li>
-                    <li><Link href="/x"><Image src="/twitter.png" alt="twitter logo" width={33} height={33} priority /></Link></li>
+                    <li><Link href="https://www.facebook.com/profile.php?id=61574920897894 "><Image src="/facebook.png" alt="facebook logo" width={33} height={33} priority /></Link></li>
+                    <li><Link href="https://www.instagram.com/booklect.ca?igsh=dG12cnNrdXdpOWxt&utm_source=qr"><Image src="/instagram.png" alt="instagram logo" width={33} height={33} priority /></Link></li>
+                    <li><Link href="https://x.com/booklect_ca"><Image src="/x.png" alt="x logo" width={33} height={33} priority /></Link></li>
                 </ul>
                 <p>© 2025 Booklect. All Rights Reserved.</p>
         </footer>
