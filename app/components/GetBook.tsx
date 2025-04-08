@@ -7,6 +7,7 @@ function GetBook() {
     const [input, setInput] = useState("");
     const [error, setError] = useState(null);
 
+    //make it private (API key in .env >> gitignore)
     const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
 
     useEffect(() => {
