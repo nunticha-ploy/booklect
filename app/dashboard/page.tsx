@@ -1,6 +1,5 @@
 import React from "react";
 import BookList from "./books/page";
-import styles from "./page.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../components/page.css";
