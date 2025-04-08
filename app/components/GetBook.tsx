@@ -7,14 +7,19 @@ function GetBook() {
     const [input, setInput] = useState("");
     const [error, setError] = useState(null);
 
+    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
+
     useEffect(() => {
         async function fetchBook() {
             try {
-                const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`);
+                const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apiKey}`);
                 if (!response.ok) {
                     throw new Error("Failed to fetch");
                 }
                 const data = await response.json();
+
+                console.log(process.env.REACT_APP_GOOGLE_API_KEY) 
+
                 setBooks(data.items);
                 setError(null);
             } catch (error: any) {
@@ -24,6 +29,7 @@ function GetBook() {
         if (search) {
             fetchBook();
         }
+
     }, [search]);
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
