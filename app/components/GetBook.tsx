@@ -10,7 +10,7 @@ function GetBook() {
     useEffect(() => {
         async function fetchBook() {
             try {
-                const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyDZzO1CYY283vSN-bscmfuv6FnVrpU9B2o`);
+                const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`);
                 if (!response.ok) {
                     throw new Error("Failed to fetch");
                 }
