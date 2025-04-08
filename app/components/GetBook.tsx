@@ -54,7 +54,7 @@ function GetBook() {
                     <li key={books.id}>
                         <h3>{books.volumeInfo.title}</h3>
                         <img
-                            src={books.volumeInfo.imageLinks?.thumbnail || "https://via.placeholder.com/128x200?text=No+Image"}
+                            src={books.volumeInfo.imageLinks?.thumbnail}
                             alt={books.volumeInfo.title}
                         />
                     </li>
