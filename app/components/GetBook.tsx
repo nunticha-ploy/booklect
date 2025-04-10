@@ -1,11 +1,17 @@
 "use client"
 import React, { useEffect, useState } from "react";
+import Book from './BookProvider';
+import { useContext } from 'react';
+import { useRouter } from 'next/navigation';
 
 function GetBook() {
     const [books, setBooks] = useState<any[]>([]);
     const [search, setSearch] = useState("");
     const [input, setInput] = useState("");
     const [error, setError] = useState(null);
+    const router = useRouter();
+    const { book, setBook } = useContext(Book);
+
 
     //make it private (API key in .env >> gitignore)
     const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
@@ -19,7 +25,9 @@ function GetBook() {
                 }
                 const data = await response.json();
 
-                console.log(process.env.REACT_APP_GOOGLE_API_KEY) 
+                console.log(process.env.REACT_APP_GOOGLE_API_KEY)
+
+                console.log(data.items)
 
                 setBooks(data.items);
                 setError(null);
@@ -41,6 +49,12 @@ function GetBook() {
         setSearch(input);
     }
 
+
+    const handleLinkClick = (newBook: any, id: any) => {
+        setBook(newBook);
+        router.push(`./bookpage/${id}`);
+    }
+
     return (
         <div>
             <input
@@ -59,7 +73,7 @@ function GetBook() {
             <ul>
                 {books?.map((books) => (
                     <li key={books.id}>
-                        <h3>{books.volumeInfo.title}</h3>
+                        <h3 onClick={() => handleLinkClick(books.volumeInfo, books.id)}>{books.volumeInfo.title}</h3>
                         <img
                             src={books.volumeInfo.imageLinks?.thumbnail}
                             alt={books.volumeInfo.title}
@@ -67,6 +81,7 @@ function GetBook() {
                     </li>
                 ))}
             </ul>
+
 
             {error && <p style={{ color: "red" }}>Error: {error}</p>}
 

@@ -1,11 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import "../components/page.css";
 import '../globals.css';
 import './bookpage.css';
+import Book from "../../components/BookProvider";
+import { useContext } from "react";
 
 export default function Bookpage(){
   const bookdetails = {
@@ -17,6 +18,11 @@ export default function Bookpage(){
     "category": "Fantasy",
     "mrate": "PG-13",
   }
+
+
+  const {book} = useContext(Book);
+  console.log(book);
+
     return (
         <div>
           <Header />
