@@ -5,7 +5,7 @@
     padding: 3em 2em;
     gap: 2em;
     grid-template-columns: 5fr 3fr;
-    grid-template-rows: 3fr 5fr;
+    grid-template-rows: auto auto;
 }
 
 .child-two img {
@@ -23,7 +23,6 @@
 }
 .child-two h1 {
     font-size: 3em;
-    line-height: 3em;
     text-align: center;
     margin: auto;
 }
@@ -36,6 +35,7 @@
     display:flex;
     flex-direction: row;
     border-radius: 20px;
+    height: fit-content;
 }
 
 .child-three {
