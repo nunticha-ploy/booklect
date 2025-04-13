@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
+import "./page.css";
 
 function GetBook({ click, setClick, setDetails }: { 
     click: boolean, 
@@ -27,15 +28,11 @@ function GetBook({ click, setClick, setDetails }: {
     useEffect(() => {
         async function fetchBook() {
             try {
-                const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apiKey}`);
+                const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&startIndex=0&maxResults=40&key=${apiKey}`);
                 if (!response.ok) {
                     throw new Error("Failed to fetch");
                 }
                 const data = await response.json();
-
-                console.log(process.env.REACT_APP_GOOGLE_API_KEY)
-
-                console.log(data.items)
 
                 setBooks(data.items);
                 setError(null);

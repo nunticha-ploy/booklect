@@ -77,6 +77,7 @@
     width: 100%;
     background-color: #F3C838;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .navMobile.active {
@@ -87,6 +88,7 @@
     display: none;
     font-size: 24px;
     width: 30px;
+    max-width: 30px;
     height: 30px;
     background: none;
     border: none;
@@ -152,24 +154,40 @@
 
 
 /*Footer*/
-.containerFooter {
-    background-color: #F3C838;
-    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
-    padding: 2%;
+.containerFooterAll {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 4%;
+    width: 100vw;
+    background-color: #F3C838;
 }
 
-.containerFooter li a {
+.containerFooter {
+    background-color: #F3C838;
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-top: 4%;
+    width: 100vw;
+}
+
+.footerSection1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerSection1 li a {
     font-weight: 400;
     font-size: 20px;
     line-height: 19px;
 }
 
-.containerFooter p {
+.footerSection1 p {
     font-weight: 300;
     font-size: 16px;
     line-height: 19px;
@@ -189,8 +207,8 @@
 }
 
 .socialNav {
-    padding-top: 2%;
-    padding-bottom: 1%;
+    padding-top: 10%;
+    padding-bottom: 2%;
 }
 
 .footer {
@@ -214,7 +232,7 @@
     margin-left: 10px;
     margin-right: 10px;
     min-width: 100px;
-    font-weight: 300;
+    font-weight: 350;
     font-size: 24px;
     line-height: 28px;
     transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
@@ -234,6 +252,13 @@
 .footer li a:visited {
     color: black;
 }
+
+.contact h3{
+    font-weight: 300;
+    font-size: 24px;
+    margin-top: 0;
+}
+
 
 /*HomePage*/
 .containerHome {
@@ -294,19 +319,102 @@
     color: #000000;
 }
 
+/*SearchPage*/
+
+.searchBookContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 3%;
+    text-align: center;
+}
+
+.searchBookContainer img {
+    width: 158px;
+    height: 222px;
+}
+
+.searchBookContainer h3 {
+    margin-top: 5%;
+    font-weight: 400;
+    margin-bottom: 10%;
+}
+
 .containerSearch {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
     align-items: center;
+    min-height: 55vh;
 }
 
 .containerSearch h1 {
+    margin-top: 5%;
     font-weight: 700;
     font-size: 48px;
     line-height: 56px;
     text-align: center;
+}
+
+.searchPlaceholder input {
+    background-color: #90BDD7;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 5%;
+    width: 300px;
+    font-style: italic;
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+.searchPlaceholder input::placeholder {
+    color: #000000;
+    font-size: 14px;
+    font-style: italic;
+    opacity: 60%;
+}
+
+.searchPlaceholder button {
+    width: 80px;
+    height: 36px;
+    background: #F3C838;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border-color: #F3C838;
+    margin-left: 20px;
+
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #000000;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.searchPlaceholder button:hover {
+    background-color: #90BDD7;
+    border-color: #90BDD7;
+    transform: scale(1.1);
+    color: #EDE7D7;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.searchPlaceholder button:active {
+    background-color: #F3C838;
+    border-color: #F3C838;
+    transform: scale(0.98);
+    color: #000000;
+}
+
+.searchPage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -377,19 +485,31 @@
         top: 1020px;
         font-weight: 500;
         font-size: 32px;
-        line-height: 38px;
+        line-height: 38px; 
     }
 
-    .containerFooter {
+    .containerFooterAll {
         margin-top: 15%;
     }
 
+    .containerFooterAll p {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .containerFooter {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
     .containerFooter ul {
-        margin-top: 5%;
+        margin-top: 8%;
     }
 
     .containerFooter li a {
-        font-weight: 300;
+        font-weight: 350;
         font-size: 16px;
         line-height: 19px;
     }
@@ -400,8 +520,7 @@
     }
 
     .socialNav {
-        margin-top: 4%;
-        margin-bottom: 2%;
+        padding-top: 5%;
     }
 
     .socialNav li {
@@ -413,5 +532,49 @@
         font-size: 12px;
         line-height: 15px;
     }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        text-align: center;
+        margin-bottom: 5%;
+        margin-top: 4%;
+    }
+
+    .contact h3 {
+        margin-top: 5%;
+         font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 10px;
+    }
+
+    .contact p {
+        margin: 4px;
+    }
+
+    /*SearchPage*/
+    .searchBookContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 10%;
+    }
+
+    .searchBookContainer img {
+        width: 128px;
+        height: 192px;
+    }
+
+    .searchPlaceholder input {
+        width: 200px;
+    }
+
+    .containerSearch h1 {
+        margin-top: 12%;
+    }
+
 
 }
