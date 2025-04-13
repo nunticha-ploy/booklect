@@ -489,7 +489,7 @@
     }
 
     .containerFooterAll {
-        margin-top: 20%;
+        margin-top: 10%;
     }
 
     .containerFooterAll p {
@@ -571,5 +571,10 @@
     .searchPlaceholder input {
         width: 200px;
     }
+
+    .containerSearch h1 {
+        margin-top: 12%;
+    }
+
 
 }
