@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useState } from "react";
+import "./page.css";
 
 function GetBook() {
     const [books, setBooks] = useState<any[]>([]);
@@ -13,13 +14,11 @@ function GetBook() {
     useEffect(() => {
         async function fetchBook() {
             try {
-                const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apiKey}`);
+                const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&startIndex=0&maxResults=40&key=${apiKey}`);
                 if (!response.ok) {
                     throw new Error("Failed to fetch");
                 }
                 const data = await response.json();
-
-                console.log(process.env.REACT_APP_GOOGLE_API_KEY) 
 
                 setBooks(data.items);
                 setError(null);
@@ -56,14 +55,15 @@ function GetBook() {
 
             <button onClick={handleSearchClick}>Search</button>
 
-            <ul>
+            <ul className="searchBookContainer">
                 {books?.map((books) => (
                     <li key={books.id}>
-                        <h3>{books.volumeInfo.title}</h3>
                         <img
-                            src={books.volumeInfo.imageLinks?.thumbnail}
+                            src={books.volumeInfo.imageLinks?.thumbnail || "/defaultCover.png"}
                             alt={books.volumeInfo.title}
+                            loading="lazy"
                         />
+                        <h3>{books.volumeInfo.title}</h3>
                     </li>
                 ))}
             </ul>
