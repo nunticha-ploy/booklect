@@ -232,7 +232,7 @@
     margin-left: 10px;
     margin-right: 10px;
     min-width: 100px;
-    font-weight: 300;
+    font-weight: 350;
     font-size: 24px;
     line-height: 28px;
     transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
@@ -485,11 +485,11 @@
         top: 1020px;
         font-weight: 500;
         font-size: 32px;
-        line-height: 38px;
+        line-height: 38px; 
     }
 
     .containerFooterAll {
-        margin-top: 10%;
+        margin-top: 15%;
     }
 
     .containerFooterAll p {
@@ -509,7 +509,7 @@
     }
 
     .containerFooter li a {
-        font-weight: 300;
+        font-weight: 350;
         font-size: 16px;
         line-height: 19px;
     }
