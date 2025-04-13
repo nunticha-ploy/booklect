@@ -77,6 +77,7 @@
     width: 100%;
     background-color: #F3C838;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .navMobile.active {
@@ -87,6 +88,7 @@
     display: none;
     font-size: 24px;
     width: 30px;
+    max-width: 30px;
     height: 30px;
     background: none;
     border: none;
@@ -318,15 +320,12 @@
 }
 
 .containerSearch {
-    min-height: 55vh;
-}
-
-.containerSearch {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     text-align: center;
     align-items: center;
+    min-height: 55vh;
 }
 
 .containerSearch h1 {
@@ -386,6 +385,13 @@
     border-color: #F3C838;
     transform: scale(0.98);
     color: #000000;
+}
+
+.searchPage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -492,5 +498,7 @@
         font-size: 12px;
         line-height: 15px;
     }
+
+    /*SearchPage*/
 
 }

@@ -7,7 +7,7 @@ import '../globals.css';
 
 export default function SearchPage () {
     return (
-        <div>
+        <div className="searchPage">
           <Header />
           <main>
             <section className="containerSearch">
