@@ -505,7 +505,7 @@
     }
 
     .containerFooter ul {
-        margin-top: 5%;
+        margin-top: 8%;
     }
 
     .containerFooter li a {
@@ -520,8 +520,7 @@
     }
 
     .socialNav {
-        padding-top: 3%;
-        padding-bottom: 3%;
+        padding-top: 5%;
     }
 
     .socialNav li {
@@ -541,6 +540,8 @@
         align-items: center;
         width: 300px;
         text-align: center;
+        margin-bottom: 5%;
+        margin-top: 4%;
     }
 
     .contact h3 {
@@ -552,9 +553,23 @@
     }
 
     .contact p {
-        margin: 7px;
+        margin: 4px;
     }
 
     /*SearchPage*/
+    .searchBookContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 10%;
+    }
+
+    .searchBookContainer img {
+        width: 128px;
+        height: 192px;
+    }
+
+    .searchPlaceholder input {
+        width: 200px;
+    }
 
 }
