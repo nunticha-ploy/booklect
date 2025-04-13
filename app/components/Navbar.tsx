@@ -29,6 +29,7 @@ export default function Navbar() {
                 <li><Link href="/Searchbooks">Search book</Link></li>
             </ul>
             </div>
+            
         </nav>
     )
 }
