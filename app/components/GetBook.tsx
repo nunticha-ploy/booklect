@@ -2,7 +2,19 @@
 import React, { useEffect, useState } from "react";
 import "./page.css";
 
-function GetBook() {
+function GetBook({ click, setClick, setDetails }: { 
+    click: boolean, 
+    setClick: React.Dispatch<React.SetStateAction<boolean>>, 
+    setDetails:  React.Dispatch<React.SetStateAction<{
+    image: string;
+    title: string;
+    description: string;
+    author: string;
+    pages: number;
+    pubDate: string;
+    category: string;
+    rating: string;}>> 
+}) {
     const [books, setBooks] = useState<any[]>([]);
     const [search, setSearch] = useState("");
     const [input, setInput] = useState("");
@@ -40,39 +52,58 @@ function GetBook() {
         setSearch(input);
     }
 
+    const handleClick = (book:any) => {
+        setDetails({
+            image: book.imageLinks.thumbnail,
+            title: book.title,
+            description: book.description,
+            author: book.authors[0],
+            pages: book.pageCount,
+            pubDate: book.publishedDate,
+            category: book.categories[0],
+            rating: book.maturityRating,
+        });
+        setClick(!click);
+    }
+
     return (
-        <div>
-            <div className="searchPlaceholder">
-                <input
-                    type="text"
-                    value={input}
-                    onChange={handleInputChange}
-                    onKeyDown={(e) => {
-                        if (e.key === "Enter") {
-                            handleSearchClick();
-                        }
-                    }}
-                    placeholder="Enter book title" />
+        <main>
+            <section className="containerSearch">
+                <h1>Search Book</h1>
+                <div>
+                    <div className="searchPlaceholder">
+                        <input
+                            type="text"
+                            value={input}
+                            onChange={handleInputChange}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                    handleSearchClick();
+                                }
+                            }}
+                            placeholder="Enter book title" />
 
-                <button onClick={handleSearchClick}>Search</button>
-            </div>
+                        <button onClick={handleSearchClick}>Search</button>
+                    </div>
 
-            <ul className="searchBookContainer">
-                {books?.map((books) => (
-                    <li key={books.id}>
-                        <img
-                            src={books.volumeInfo.imageLinks?.thumbnail || "/defaultCover.png"}
-                            alt={books.volumeInfo.title}
-                            loading="lazy"
-                        />
-                        <h3>{books.volumeInfo.title}</h3>
-                    </li>
-                ))}
-            </ul>
+                    <ul className="searchBookContainer">
+                        {books?.map((books) => (
+                            <li key={books.id} onClick={() => handleClick(books.volumeInfo)}>
+                                <img
+                                    src={books.volumeInfo.imageLinks?.thumbnail || "/defaultCover.png"}
+                                    alt={books.volumeInfo.title}
+                                    loading="lazy"
+                                />
+                                <h3>{books.volumeInfo.title}</h3>
+                            </li>
+                        ))}
+                    </ul>
 
-            {error && <p style={{ color: "red" }}>Error: {error}</p>}
+                    {error && <p style={{ color: "red" }}>Error: {error}</p>}
 
-        </div>
+                </div>
+            </section>
+        </main>
     )
 
 }
