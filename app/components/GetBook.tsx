@@ -42,18 +42,20 @@ function GetBook() {
 
     return (
         <div>
-            <input
-                type="text"
-                value={input}
-                onChange={handleInputChange}
-                onKeyDown={(e) => {
-                    if (e.key === "Enter") {
-                        handleSearchClick();
-                    }
-                }}
-                placeholder="Enter book title" />
+            <div className="searchPlaceholder">
+                <input
+                    type="text"
+                    value={input}
+                    onChange={handleInputChange}
+                    onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                            handleSearchClick();
+                        }
+                    }}
+                    placeholder="Enter book title" />
 
-            <button onClick={handleSearchClick}>Search</button>
+                <button onClick={handleSearchClick}>Search</button>
+            </div>
 
             <ul className="searchBookContainer">
                 {books?.map((books) => (
