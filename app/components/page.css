@@ -154,24 +154,40 @@
 
 
 /*Footer*/
-.containerFooter {
-    background-color: #F3C838;
-    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
-    padding: 2%;
+.containerFooterAll {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 4%;
+    width: 100vw;
+    background-color: #F3C838;
 }
 
-.containerFooter li a {
+.containerFooter {
+    background-color: #F3C838;
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-top: 4%;
+    width: 100vw;
+}
+
+.footerSection1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerSection1 li a {
     font-weight: 400;
     font-size: 20px;
     line-height: 19px;
 }
 
-.containerFooter p {
+.footerSection1 p {
     font-weight: 300;
     font-size: 16px;
     line-height: 19px;
@@ -191,8 +207,8 @@
 }
 
 .socialNav {
-    padding-top: 2%;
-    padding-bottom: 1%;
+    padding-top: 10%;
+    padding-bottom: 2%;
 }
 
 .footer {
@@ -236,6 +252,13 @@
 .footer li a:visited {
     color: black;
 }
+
+.contact h3{
+    font-weight: 300;
+    font-size: 24px;
+    margin-top: 0;
+}
+
 
 /*HomePage*/
 .containerHome {
@@ -465,8 +488,20 @@
         line-height: 38px;
     }
 
+    .containerFooterAll {
+        margin-top: 20%;
+    }
+
+    .containerFooterAll p {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
     .containerFooter {
-        margin-top: 15%;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
     }
 
     .containerFooter ul {
@@ -485,8 +520,8 @@
     }
 
     .socialNav {
-        margin-top: 4%;
-        margin-bottom: 2%;
+        padding-top: 3%;
+        padding-bottom: 3%;
     }
 
     .socialNav li {
@@ -497,6 +532,27 @@
         font-weight: 300;
         font-size: 12px;
         line-height: 15px;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        text-align: center;
+    }
+
+    .contact h3 {
+        margin-top: 5%;
+         font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 10px;
+    }
+
+    .contact p {
+        margin: 7px;
     }
 
     /*SearchPage*/
