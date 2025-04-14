@@ -1,81 +1,152 @@
 .mainContainer {
-    height: 10em;
     display: grid;
     box-sizing: content-box;
-    padding: 2em;
-    gap: 2em;
-    grid-template-columns: 1fr 4fr 1fr 10fr 5fr;
-    grid-template-rows: 1fr 7fr 1fr 1fr;
-    height: 40em;
-}
-
-.child-one {
-    grid-column: 1 / 3;
-    grid-row: 2 / 4;
-    z-index: 1;
-}
-
-.child-one img {
-    width: 100%;
     height: 100%;
+    padding: 3em 2em;
+    gap: 2em;
+    grid-template-columns: 5fr 3fr;
+    grid-template-rows: auto auto;
 }
 
-.child-one p{
-    margin-top: 1.5em;
-    font-size: 1.5em;
+.child-two img {
+    width: 9em;
+    height: 13em;
+    border: 7px solid #F2CD50;
+    margin: 0.5em 0 0.5em 1em;
+    border-radius: 20px;
+}
+
+.child-four p{
+    font-size: 1.3em;
+    float: right;
+    color:#000000b6;
+}
+.child-two h1 {
+    font-size: 3em;
+    text-align: center;
+    margin: auto;
 }
 
 .child-two {
-    grid-column: 2 / 4;
-    grid-row: 1 / 3;
-    background-color: #90BDD7;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    border: 7px solid #F2CD50;
+    background-color:#EDE7D7;
+    display:flex;
+    flex-direction: row;
+    border-radius: 20px;
+    height: fit-content;
 }
 
 .child-three {
-    grid-column: 4 / 5;
-    grid-row: 1 / 5;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
     text-align: center;
-    padding: 1em;
+    padding: 1em 3em;
 }
 
 .child-three p {
     font-size: 1.5em;
 }
 
-.child-three h1 {
-    font-size: 3em;
-}
-
-.child-three button {
-    margin-top: 5em;
+.addButton {
     padding: 0.5em;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    background: #F2CD50;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 33px;
+   background: #F2CD50;
+   font-style: normal;
+   font-weight: 700;
+   font-size: 28px;
+   line-height: 33px;
     text-align: center;
     color: #000000;
     border: none;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.addButton:hover {
+    background-color: #90BDD7;
+    border-color: #90BDD7;
+    transform: scale(1.1);
+    color: #EDE7D7;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.addButton:active {
+    background-color: #F3C838;
+    border-color: #F3C838;
+    transform: scale(0.98);
+    color: #000000;
+}
+
+.buttonContainer{
+    margin: 1em 0;
 }
 
 .child-four{
-    grid-column: 5 / 6;
-    grid-row: 1 / 4;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+.information{
     background-color: #90BDD7;
     border-radius: 20px;
+    height:fit-content;
+    padding: 0 0 0.7em;
 }
 
-.child-four div{
-    border: 1ps solid black;
+.information div{
     padding: 0.5em;
     font-size: 1.5em;
+    box-sizing: content-box;
 }
 
 .info{
     background-color: #EDE7D7;
     margin: 0 0.5em;
     border-radius: 10px;
+
 }
+
+@media (max-width: 500px) {
+    .mainContainer{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    .child-four{
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    .child-two h1 {
+        font-size: 2em;
+        line-height: 2em;
+        text-align: center;
+        margin: auto;
+    }
+    .child-two {
+        flex-direction: column;
+        margin: 4px;
+        height: fit-content;
+        padding-top: 1em;
+    }
+    .child-two img {
+        width: 9em;
+        height: 13em;
+        border: 7px solid #F2CD50;
+        margin: auto;
+        border-radius: 20px;
+    }
+    .child-three {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        text-align: center;
+        padding: 0;
+        height: fit-content;
+    }
+
+    .child-three p {
+        font-size: 1.5em;
+        margin: 0;
+    }
+} 
