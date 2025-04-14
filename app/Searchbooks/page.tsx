@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import GetBook from "../components/GetBook";
 import "../components/page.css";
 import '../globals.css';
-import BookPage from "../bookpage/page";
+import BookPage from "../bookpage/bookpage";
 
 export default function SearchPage() {
   const [click, setClick] = useState(true)
