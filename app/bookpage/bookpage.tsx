@@ -1,5 +1,5 @@
 'use client'
-import React from "react";
+import React, { useState } from "react";
 import "../components/page.css";
 import '../globals.css';
 import './bookpage.css';
@@ -17,6 +17,14 @@ function BookPage({ click, setClick, details }: {
     category: string;
     rating: string;
   }}) {
+
+
+    const handleInProgress = async() => {
+      
+    }
+
+    const [list, setList] = useState(false)
+
     return (
         <div className="mainContainer">
           <section className="child-two">
@@ -40,12 +48,24 @@ function BookPage({ click, setClick, details }: {
             <div className="info">{details.rating}</div>
             </div>
             <div className="buttonContainer">
-            <button type="button" className="addButton">Add to my books</button>
+            <button type="button" className="addButton" onClick={() => setList(!list)}>Add to my books</button>
             </div>
             <p onClick={() => setClick(!click)}>Return to search</p>
           </section>
-        </div>
+          { list ? (
+                      <section className="popUp" onClick={() => setList(!list)}>
+                      <div className="popDesc">
+                        <h1 className="listHeader">Choose list</h1>
+                        <div>
+                          <button type="button" className="popBut">In progress</button>
+                          <button type="button" className="popBut">Finished</button>
+                          <button type="button" className="popBut">TBR</button>
+                        </div>
+                      </div>
+                    </section>
+          ):("")}
+          </div>
     )
   }
   
-  export default BookPage;
+export default BookPage;
