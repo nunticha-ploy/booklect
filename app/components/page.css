@@ -225,6 +225,7 @@
 }
 
 .footer li a {
+    color: #000000;
     text-decoration: none;
     display: inline-flex;
     justify-content: center;

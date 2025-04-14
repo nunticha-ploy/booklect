@@ -19,7 +19,7 @@ export default function Footer() {
                         {/* change it later*/}
                         <li><Link href="/">About Us</Link></li>
                         <li><Link href="/">Team</Link></li>
-                        <li><Link href="/">Policy</Link></li>
+                        <li><Link href="/policy">Policy</Link></li>
                         <li><Link href="/">Feedback</Link></li>
                     </ul>
                     <ul className="footer socialNav">
