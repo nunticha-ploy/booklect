@@ -121,13 +121,14 @@
     top: 0;
     right: 0;
     bottom: 0;
+    padding-top: 7em;
 }
 
 .popDesc {
     background-color: #90BDD7;
     width: 25em;
     height: 27em;
-    margin: 8em 32em;
+    margin: auto;
     background: #F2CD50;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
@@ -227,5 +228,149 @@
     .child-three p {
         font-size: 1.5em;
         margin: 0;
+        padding: 1em;
+    }
+
+    .popUp {
+        position: fixed;
+        background-color: rgba(237, 231, 215, 0.6);
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding-top: 7em;
+    }
+    
+    .popDesc {
+        background-color: #90BDD7;
+        width: 12em;
+        height: 17em;
+        margin: 3em 5em;
+        background: #F2CD50;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        padding: 2em;
+    }
+    
+    .listHeader {
+        width: 7em;
+        background: #EDE7D7;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        text-align: center;
+        margin: auto;
+        padding: 0.5em;
+    }
+    
+    .popDesc div {
+        margin: 2em 0;
+        text-align: center;
+    }
+    
+    .popBut {
+        width: 10em;
+        font-size: 1.2em;
+        background: #90BDD7;
+        border: none;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        font-weight: 600;
+        text-align: center;
+        color: #000000;
+        padding: 0.7em;
+        margin: 0.2em;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+}
+
+@media (max-width: 393px) {
+    .mainContainer {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+    .child-two h1 {
+        font-size: 1em;
+        line-height: 1em;
+        text-align: center;
+        margin: auto;
+        padding: 0.3em;
+    }
+
+    .child-two {
+        flex-direction: column;
+        margin: auto;
+        height: fit-content;
+        padding-top: 1em;
+        width: 300px;
+    }
+
+    .child-two img {
+        width: 4em;
+        height: 7em;
+        border: 7px solid #F2CD50;
+        margin: auto;
+        border-radius: 20px;
+    }
+
+    .child-three {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        text-align: center;
+        padding: 0;
+        height: fit-content;
+    }
+
+    .child-three p {
+        font-size: 0.7em;
+        margin: 0;
+        width: 300px;
+    }
+    
+    .information {
+        background-color: #90BDD7;
+        border-radius: 20px;
+        height: fit-content;
+        padding: 0 0 0.7em;
+        width: 300px;
+        margin: auto;
+    }
+    
+    .information div {
+        padding: 0.5em;
+        font-size: 0.7em;
+        box-sizing: content-box;
+    }
+    
+    .info {
+        background-color: #EDE7D7;
+        margin: 0 0.5em;
+        border-radius: 10px;
+    
+    }
+
+
+.buttonContainer {
+    margin: 0.5em 0;
+}
+
+.addButton {
+    padding: 0.2em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    background: #F2CD50;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    border: none;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+    .child-four p {
+        font-size: 1em;
     }
 }
