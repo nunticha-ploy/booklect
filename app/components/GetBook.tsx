@@ -54,14 +54,14 @@ function GetBook({ click, setClick, setDetails }: {
 
     const handleClick = (book:any) => {
         setDetails({
-            image: book.imageLinks.thumbnail,
-            title: book.title,
-            description: book.description,
-            author: book.authors[0],
-            pages: book.pageCount,
-            pubDate: book.publishedDate,
-            category: book.categories[0],
-            rating: book.maturityRating,
+            image: book.imageLinks?.thumbnail || "/defaultCover.png",
+            title: book.title || "No Title",
+            description: book.description || "No Description",
+            author: book.authors?.[0] || "Unknown",
+            pages: book.pageCount || 0,
+            pubDate: book.publishedDate || "Unknown",
+            category: book.categories?.[0] || "Uncategorized",
+            rating: book.maturityRating || "Unknown",
         });
         setClick(!click);
     }
