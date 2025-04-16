@@ -29,6 +29,16 @@ function BookPage({ click, setClick, details }: {
   const category = details.category;
   const rating = details.rating;
 
+  const bookDetails = {
+    image: image,
+    title: title,
+    description: description,
+    author: author,
+    pages: pages,
+    pubDate: pubDate,
+    castegory: category,
+    rating: rating,
+  }
 
   //function for adding a book to the specified table of the database
   const handleDBPopulation = async(tablename:string) => {
@@ -51,7 +61,6 @@ function BookPage({ click, setClick, details }: {
       console.log(error.message + ": Error adding the book")
     }
   };
-
 
   return (
     <div className="mainContainer">
