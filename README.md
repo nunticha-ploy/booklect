@@ -1,4 +1,9 @@
-https://booklect.vercel.app
+Vercel: https://booklect.vercel.app
+
+Figma: https://www.figma.com/design/Zn0Lc2jBXoGMB8lbKWu1IL/Booklet?node-id=0-1&p=f&t=gcS8rkjAB9vW4Nwq-0
+
+Canva: https://www.canva.com/design/DAGkgpb-EpM/5VMBK1x0_F28899PwaSt1A/edit?utm_content=DAGkgpb-EpM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 

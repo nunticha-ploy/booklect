@@ -78,5 +78,13 @@
     z-index: 2;
     width: 100px;
     height: 160px;
-    padding-left: 50px;
+    padding-left: 30px;
+}
+
+.ul {
+    list-style-type: none;
+}
+
+.li {
+    display: inline-block;
 }
