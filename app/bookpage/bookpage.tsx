@@ -44,7 +44,6 @@ function BookPage({ click, setClick, details }: {
   //function for adding a book to the specified table of the database
   const handleDBPopulation = async(tablename:string) => {
 
-
     if (tablename=="tbr"){
         books_toread.push({ id: books_toread.length+1, image, title, description, author, pages, pubDate, category, rating });
 
@@ -57,7 +56,7 @@ function BookPage({ click, setClick, details }: {
 
     //the following part of code work on my local computer, as demonstreted in class - POST function to database
 
-    /* 
+/*  
     try {
        const res = await fetch('../bookdb/post', {
     
@@ -76,7 +75,8 @@ function BookPage({ click, setClick, details }: {
      } catch (error:any) {
        console.log(error.message + ": Error adding the book")
       }
-       */
+      */
+
   };
 
 

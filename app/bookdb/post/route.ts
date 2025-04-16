@@ -64,4 +64,5 @@ export async function GET(req: Request) {
     } catch (error) {
      return NextResponse.json({ error: "Failed to fetch books" }, { status: 500 });
     }};
+
 */
