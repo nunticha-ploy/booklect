@@ -4,6 +4,8 @@ Figma: https://www.figma.com/design/Zn0Lc2jBXoGMB8lbKWu1IL/Booklet?node-id=0-1&p
 
 Canva: https://www.canva.com/design/DAGkgpb-EpM/5VMBK1x0_F28899PwaSt1A/edit?utm_content=DAGkgpb-EpM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
+Google Drive recording of database implementation on a local device: https://drive.google.com/file/d/1M50U_Lq_K3eDyZoWTcQk3uGvCUcq1sgN/view?usp=share_link
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
