@@ -24,7 +24,7 @@ export default function Navbar() {
             <div className={`navMobile ${isOpen ? "active" : ""}`}>
             <ul className="navDrop" >
                 <li><Link href="/">Home</Link></li>
-                <li><Link href="/">Dashboard</Link></li>
+                <li><Link href="/dashboard">Dashboard</Link></li>
                 <li><Link href="/">My books</Link></li>
                 <li><Link href="/Searchbooks">Search book</Link></li>
             </ul>
