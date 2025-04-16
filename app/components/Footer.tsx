@@ -18,7 +18,7 @@ export default function Footer() {
                     <ul className="footer">
                         {/* change it later*/}
                         <li><Link href="/aboutUs">About Us</Link></li>
-                        <li><Link href="/">Team</Link></li>
+                        <li><Link href="/team">Team</Link></li>
                         <li><Link href="/policy">Policy</Link></li>
                         <li><Link href="/feedback">Feedback</Link></li>
                     </ul>
