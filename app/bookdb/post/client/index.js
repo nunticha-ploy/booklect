@@ -156,7 +156,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/Users/olgatimosenko/Desktop/CPAN144/groupProject/booklect/prisma/app/generated/prisma/client",
+      "value": "/Users/olgatimosenko/Desktop/CPAN144/groupProject/booklect/node_modules/.prisma/client",
       "fromEnvVar": null
     },
     "config": {
@@ -174,10 +174,10 @@ const config = {
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../../../../.env",
-    "schemaEnvPath": "../../../../../.env"
+    "rootEnvPath": null,
+    "schemaEnvPath": "../../../.env"
   },
-  "relativePath": "../../../..",
+  "relativePath": "../../../prisma",
   "clientVersion": "6.6.0",
   "engineVersion": "f676762280b54cd07c770017ed3711ddde35f37a",
   "datasourceNames": [
@@ -193,8 +193,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"./app/generated/prisma/client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel ToRead {\n  id          Int      @id @default(autoincrement())\n  image       String\n  title       String\n  description String\n  author      String\n  pages       Int\n  pubDate     String\n  category    String\n  rating      String\n  createdAt   DateTime @default(now())\n}\n\nmodel Read {\n  id          Int      @id @default(autoincrement())\n  image       String\n  title       String\n  description String\n  author      String\n  pages       Int\n  pubDate     String\n  category    String\n  rating      String\n  createdAt   DateTime @default(now())\n}\n\nmodel InProgress {\n  id          Int      @id @default(autoincrement())\n  image       String\n  title       String\n  description String\n  author      String\n  pages       Int\n  pubDate     String\n  category    String\n  rating      String\n  createdAt   DateTime @default(now())\n}\n",
-  "inlineSchemaHash": "14bebe4da8b70cee84af2d5b6292522ab82939cfb8cd59fd0eb3cd093ab964e4",
+  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../node_modules/.prisma/client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel ToRead {\n  id          Int      @id @default(autoincrement())\n  image       String\n  title       String\n  description String\n  author      String\n  pages       Int\n  pubDate     String\n  category    String\n  rating      String\n  createdAt   DateTime @default(now())\n}\n\nmodel Read {\n  id          Int      @id @default(autoincrement())\n  image       String\n  title       String\n  description String\n  author      String\n  pages       Int\n  pubDate     String\n  category    String\n  rating      String\n  createdAt   DateTime @default(now())\n}\n\nmodel InProgress {\n  id          Int      @id @default(autoincrement())\n  image       String\n  title       String\n  description String\n  author      String\n  pages       Int\n  pubDate     String\n  category    String\n  rating      String\n  createdAt   DateTime @default(now())\n}\n",
+  "inlineSchemaHash": "bb584e5bf184b2c9c766504ebb94cb4e4e3c263c783e93d4abcc8a780fe9c71e",
   "copyEngine": true
 }
 
@@ -203,8 +203,8 @@ const fs = require('fs')
 config.dirname = __dirname
 if (!fs.existsSync(path.join(__dirname, 'schema.prisma'))) {
   const alternativePaths = [
-    "prisma/app/generated/prisma/client",
-    "app/generated/prisma/client",
+    "node_modules/.prisma/client",
+    ".prisma/client",
   ]
   
   const alternativePath = alternativePaths.find((altPath) => {
@@ -234,7 +234,7 @@ Object.assign(exports, Prisma)
 
 // file annotations for bundling tools to include these files
 path.join(__dirname, "libquery_engine-darwin-arm64.dylib.node");
-path.join(process.cwd(), "prisma/app/generated/prisma/client/libquery_engine-darwin-arm64.dylib.node")
+path.join(process.cwd(), "node_modules/.prisma/client/libquery_engine-darwin-arm64.dylib.node")
 // file annotations for bundling tools to include these files
 path.join(__dirname, "schema.prisma");
-path.join(process.cwd(), "prisma/app/generated/prisma/client/schema.prisma")
+path.join(process.cwd(), "node_modules/.prisma/client/schema.prisma")

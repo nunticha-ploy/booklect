@@ -8,8 +8,8 @@ import Footer from "../components/Footer";
 import "../components/page.css";
 import '../globals.css';
 import { NextResponse } from "next/server";
-import { PrismaClient } from '../bookdb/post/client/client';
-import { GET } from "../bookdb/post/route";
+//import { PrismaClient } from '@prisma/client';
+//import { GET } from "../bookdb/post/route";
 import { books_read, books_reading, books_toread } from "../components/tempDB";
 
 // const books_read = [

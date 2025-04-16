@@ -54,24 +54,31 @@ function BookPage({ click, setClick, details }: {
       books_reading.push({ id: books_reading.length+1, image, title, description, author, pages, pubDate, category, rating });
     }
 
-    // try {
-    //   const res = await fetch('../bookdb/post', {
-    //     method: 'POST',
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify({ image, title, description, author, pages, pubDate, category, rating, tablename })
-    //   });
+    //the following part of code work on my local computer, as demonstreted in class - POST function to database
 
-    //   const data = await res.json();
-    //   if (res.ok) {
-    //     console.log("Book added successfully!");
-    //     setList(!list);
-    //   } else {
-    //     console.log(data.error || "Failed to add book")
-    //   }
-    // } catch (error:any) {
-    //   console.log(error.message + ": Error adding the book")
-    // }
+/*  
+    try {
+       const res = await fetch('../bookdb/post', {
+    
+         method: 'POST',
+         headers: { "Content-Type": "application/json" },
+         body: JSON.stringify({ image, title, description, author, pages, pubDate, category, rating, tablename })
+       });
+
+       const data = await res.json();
+       if (res.ok) {
+         console.log("Book added successfully!");
+         setList(!list);
+       } else {
+         console.log(data.error || "Failed to add book")
+      }
+     } catch (error:any) {
+       console.log(error.message + ": Error adding the book")
+      }
+      */
+
   };
+
 
   return (
     <div className="mainContainer">

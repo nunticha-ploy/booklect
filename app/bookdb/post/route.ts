@@ -1,3 +1,4 @@
+
 import { NextResponse } from "next/server";
 import { PrismaClient } from './client';
 
@@ -44,11 +45,7 @@ export async function POST(req: Request){
 
 // function for retrieving all the books from the specified table = "tbr", "read" or other
 
-/*
-I didn't test it, so txt me if it throws any issues (but im not sure if I know the answer lol)
-To fetch all the book from the table you sould to a fetch inside try catch block, and in the body pass the name of the table
-its 'tbr', 'read' or other (whatever u wanna call it, in the if else its not specified)
-*/
+
 export async function GET(req: Request) {
     const {tablename} = await req.json();
     try {
