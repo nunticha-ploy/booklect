@@ -17,7 +17,7 @@ export default function Footer() {
                 <div className="footerSection1">
                     <ul className="footer">
                         {/* change it later*/}
-                        <li><Link href="/">About Us</Link></li>
+                        <li><Link href="/aboutUs">About Us</Link></li>
                         <li><Link href="/">Team</Link></li>
                         <li><Link href="/policy">Policy</Link></li>
                         <li><Link href="/">Feedback</Link></li>
