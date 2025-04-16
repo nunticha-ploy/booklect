@@ -20,7 +20,7 @@ export default function Footer() {
                         <li><Link href="/">About Us</Link></li>
                         <li><Link href="/">Team</Link></li>
                         <li><Link href="/policy">Policy</Link></li>
-                        <li><Link href="/">Feedback</Link></li>
+                        <li><Link href="/feedback">Feedback</Link></li>
                     </ul>
                     <ul className="footer socialNav">
                         <li><Link href="https://www.facebook.com/profile.php?id=61574920897894 "><Image src="/facebook.png" alt="facebook logo" width={33} height={33} priority /></Link></li>
