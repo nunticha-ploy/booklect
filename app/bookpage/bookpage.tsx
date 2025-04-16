@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "../components/page.css";
 import '../globals.css';
 import './bookpage.css';
+import { books_read, books_reading, books_toread } from "../components/tempDB";
 
 function BookPage({ click, setClick, details }: {
   click: boolean,
@@ -33,23 +34,33 @@ function BookPage({ click, setClick, details }: {
   //function for adding a book to the specified table of the database
   const handleDBPopulation = async(tablename:string) => {
 
-    try {
-      const res = await fetch('../bookdb/post', {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ image, title, description, author, pages, pubDate, category, rating, tablename })
-      });
+    if (tablename=="tbr"){
+        books_toread.push({ id: books_toread.length+1, image, title, description, author, pages, pubDate, category, rating });
 
-      const data = await res.json();
-      if (res.ok) {
-        console.log("Book added successfully!");
-        setList(!list);
-      } else {
-        console.log(data.error || "Failed to add book")
-      }
-    } catch (error:any) {
-      console.log(error.message + ": Error adding the book")
+    } else if (tablename=="read"){
+      books_read.push({ id: books_read.length+1, image, title, description, author, pages, pubDate, category, rating });
+
+    } else {
+      books_reading.push({ id: books_reading.length+1, image, title, description, author, pages, pubDate, category, rating });
     }
+
+    // try {
+    //   const res = await fetch('../bookdb/post', {
+    //     method: 'POST',
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify({ image, title, description, author, pages, pubDate, category, rating, tablename })
+    //   });
+
+    //   const data = await res.json();
+    //   if (res.ok) {
+    //     console.log("Book added successfully!");
+    //     setList(!list);
+    //   } else {
+    //     console.log(data.error || "Failed to add book")
+    //   }
+    // } catch (error:any) {
+    //   console.log(error.message + ": Error adding the book")
+    // }
   };
 
 
