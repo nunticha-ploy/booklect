@@ -1,4 +1,6 @@
 https://booklect.vercel.app
+https://www.canva.com/design/DAGkgpb-EpM/5VMBK1x0_F28899PwaSt1A/edit?utm_content=DAGkgpb-EpM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
