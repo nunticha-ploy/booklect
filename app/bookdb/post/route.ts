@@ -1,6 +1,6 @@
-/*
+
 import { NextResponse } from "next/server";
-import { PrismaClient } from '';
+import { PrismaClient } from './client';
 
 const prisma = new PrismaClient();
 
@@ -64,5 +64,3 @@ export async function GET(req: Request) {
     } catch (error) {
      return NextResponse.json({ error: "Failed to fetch books" }, { status: 500 });
     }};
-
-*/
