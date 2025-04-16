@@ -21,10 +21,10 @@ export default function Home(){
         },
         {
             id: 3,
-            url: "/ploy.png",
+            url: "/via.png",
             name: "Via Alexa Yu",
-            title: "Computer Porgramming student",
-            description: "Information to be added."
+            title: "Fx Artist / Computer Porgramming student",
+            description: "Perpetually tired human who just wants to sleep."
         }
     ]
 
