@@ -22,3 +22,14 @@
     height: 100px;
     font-family: 'Roboto', sans-serif;
 }
+
+@media (max-width: 393px) {
+
+    .searchPlaceholder {
+        width: 250px;
+    }
+
+    .textarea {
+        width: 200px;
+    }
+}
