@@ -26,7 +26,8 @@ export default function FeedbackPage() {
                     <div className="searchPlaceholder">
                         <form onSubmit={handleSubmit}>
                             <label>
-                                Name:            &nbsp;
+                                Name
+                                <br />
                                 <input
                                     type="text"
                                     value={name}
@@ -35,7 +36,8 @@ export default function FeedbackPage() {
                             </label>
                             <br />
                             <label>
-                                Email:            &nbsp;
+                                Email
+                                <br />
                                 <input
                                     type="email"
                                     value={email}
@@ -44,13 +46,13 @@ export default function FeedbackPage() {
                             </label>
                             <br />
                             <label>
-                                Message:            &nbsp;
-                                <input
-                                    type="text"
+                                Message
+                                <br />
+                                <textarea className={styles.textarea}
                                     value={message}
-                                    onChange={(e) => setMessage(e.target.value)}
-                                />
+                                    onChange={(e) => setMessage(e.target.value)}></textarea>
                             </label>
+                            <br />
                             <br />
                             <button>Submit</button>
                         </form>

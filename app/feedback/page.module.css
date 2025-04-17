@@ -3,5 +3,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.textarea {
+    background-color: #90BDD7;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 5%;
+    width: 300px;
+    font-style: italic;
+    font-size: 14px;
+    padding-left: 20px;
+    height: 100px;
+    font-family: 'Roboto', sans-serif;
 }
