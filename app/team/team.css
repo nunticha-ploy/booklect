@@ -29,7 +29,7 @@
     .mainContainer ul{
         flex-direction: column;
         width: 90%;
-        margin: auto;
+        margin: 0;
     }
     .mainContainer ul li {
         border: 5px solid #90BDD7;
@@ -54,4 +54,6 @@
     .devContainer h4{
         margin: 0 1.3em  0.5em;
     }
+
+    
 }
