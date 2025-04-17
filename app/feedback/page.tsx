@@ -24,7 +24,7 @@ export default function FeedbackPage() {
                 <div className={styles.container}>
                     <h1>Feedback</h1>
                     <div className="searchPlaceholder">
-                        <form onSubmit={handleSubmit}>
+                        <form className={styles.feedbackForm} onSubmit={handleSubmit}>
                             <label>
                                 Name
                                 <br />
@@ -54,7 +54,7 @@ export default function FeedbackPage() {
                             </label>
                             <br />
                             <br />
-                            <button>Submit</button>
+                            <button className={styles.overrideButton}>Submit</button>
                         </form>
                     </div>
                 </div>
