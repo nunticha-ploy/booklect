@@ -23,7 +23,7 @@ export default function Home(){
             id: 3,
             url: "/via.png",
             name: "Via Alexa Yu",
-            title: "Fx Artist / Computer Porgramming student",
+            title: "Fx Artist / Computer Programming student",
             description: "Perpetually tired human who just wants to sleep."
         }
     ]
